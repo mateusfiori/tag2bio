@@ -1,4 +1,4 @@
-from tag2bio import Tag2Bio
+from tag2bio import Tag2Bio, Bio2Tag
 
 def main():
     text = """My name is <name>John Doe</name>. and this is just an
@@ -12,7 +12,14 @@ def main():
     
     print(parsed)
 
-    tb.save(output_path)
+    # tb.save(output_path)
+
+    bt = Bio2Tag(parsed)
+    bio_parsed = bt.parse()
+
+    print(bio_parsed)
+
+    bt.save()
 
 if __name__ == '__main__':
     main() 
