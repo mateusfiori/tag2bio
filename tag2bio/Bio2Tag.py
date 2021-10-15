@@ -1,4 +1,12 @@
 class Bio2Tag:
+    """ Class responsible converting tag format annotated text
+    to BIO format annotated text 
+    
+    Attributes:
+        text (str): The text that will be converted 
+    
+    """  
+
     def __init__(self, text: str='') -> None:
         self.text: str = text
         self.parsed_text: str = ''
@@ -59,7 +67,7 @@ class Bio2Tag:
         
         Returns: 
             None
-    
+
         """
         
         with open(path, 'w') as f:

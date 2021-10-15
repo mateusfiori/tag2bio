@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 
 
 class Tag2Bio:
-    """ Class responsible converting tag format annottated text
-    to BIO format annottated text 
+    """ Class responsible converting tag format annotated text
+    to BIO format annotated text 
     
     Attributes:
         text (str): The text that will be converted 
@@ -26,7 +26,7 @@ class Tag2Bio:
         
         Returns: 
             str: parsed text in BIO format
-    
+
         """
         
         clean_text: str = self.soup.get_text()
